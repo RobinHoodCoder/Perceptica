@@ -1,0 +1,45 @@
+{
+    "type": "extension",
+    "id": "com.fastspot.section-break-field-type",
+    "version": "1.0",
+    "revision": 1,
+    "compatibility": "4.2+",
+    "title": "Section Break",
+    "description": "A simple section break field that helps you organize your forms.",
+    "keywords": [
+        "section",
+        "break",
+        "section break"
+    ],
+    "author": {
+        "name": "Fastspot",
+        "url": "http://www.fastspot.com",
+        "email": "tim@fastspot.com"
+    },
+    "licenses": {
+        "LGPL v3": "http://opensource.org/licenses/LGPL-3.0"
+    },
+    "components": {
+        "module_groups": [],
+        "modules": [],
+        "templates": [],
+        "callouts": [],
+        "settings": [],
+        "feeds": [],
+        "field_types": [
+            {
+                "id": "com.fastspot.section-break-field-type*section-break",
+                "name": "Section Break",
+                "use_cases": {
+                    "templates": "on",
+                    "modules": "on",
+                    "callouts": "on",
+                    "settings": "on"
+                },
+                "self_draw": "on",
+                "extension": "com.fastspot.section-break-field-type"
+            }
+        ],
+        "tables": []
+    }
+}

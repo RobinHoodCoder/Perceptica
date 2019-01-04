@@ -1,0 +1,215 @@
+
+// Base style for inputs
+.form-intro{
+  margin-bottom: 20px;
+}
+
+// Base style for inputs
+
+
+
+@keyframes hideSuccess {
+  to {
+    transform: translateY(100%);
+  }
+}
+@-webkit-keyframes hideSuccess {
+  to {
+    transform: translateY(100%);
+  }
+}
+.form-success-overlay{
+  padding:20px;
+  -moz-animation: hideSuccess .2s ease-in 7s forwards;
+  /* Firefox */
+  -webkit-animation: hideSuccess .2s ease-in 7s forwards;
+  /* Safari and Chrome */
+  -o-animation: hideSuccess .2s ease-in 7s forwards;
+  /* Opera */
+  animation: hideSuccess .2s ease-in 7s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  background: @basicGreen;
+  color: white;
+  text-align: center;
+
+  position:fixed;
+  bottom:0;
+  left:0;
+  z-index:999;
+  width:100%;
+}
+
+.form-error-overlay:extend(.form-success-overlay){
+  background: lighten(@basicRed, 5%);
+}
+
+textarea{
+  //margin-top: 25px !important;
+}
+form{
+
+  label, p{
+    font-family: @themeFont;
+    font-size: 1.2em;
+    margin:0;
+    padding:0;
+    display:block;
+    line-height: 180%;
+  }
+}
+input[type=text], input[type=date],input[type=select] input[type=datetime], input[type=number], input[type=search], input[type=time], input[type=url], input[type=tel], input[type=email], textarea {
+
+
+  width: 100%;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+
+
+
+}
+input[type=radio]{
+  height: auto;
+
+}
+
+form input, form select, form textarea {
+  color: @baseFontColor;
+  font-size: 1.2em;
+  font-family: @themeFont;
+  box-sizing: border-box;
+  display: block;
+  line-height: 2em;
+  padding: 0 10px;
+  resize: none;
+  background: #ededed;
+  border:none;
+  &.disabled{
+    opacity: 0.4;
+  }
+
+
+}
+
+form input, form select{
+  height: 60px;
+
+}
+
+form{
+
+  select{
+    &:not(.disabled){
+      cursor: pointer;
+    }
+
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  textarea{
+    height: 200px;
+  }
+}
+
+input[type=radio]{
+  display: inline-block;
+  margin-right: 5px;
+}
+input[type=number]{
+  display: inline-block;
+  margin-right: 5px;
+}
+input.number{
+  max-width:100px !important;
+  display: inline-block;
+  margin-right: 5px;
+}
+select.select{
+  border:none;
+  margin:0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position:relative;
+  z-index:4;
+}
+
+
+
+
+//Focus styling
+input:focus,select:focus,textarea:focus,option:focus{
+
+}
+input:placeholder-shown{
+  opacity: 1;
+}
+
+//Anders, namelijk veld styling
+.extra-item{
+  margin-top:10px !important;
+}
+.form-input-group{
+  margin-bottom: 15px;
+}
+//Radio buttons
+radiogroup{
+  display: block;
+  label{
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.required-form-text{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input:focus,select:focus,textarea:focus,option:focus{
+  outline: none;
+}
+fieldset{
+  border:none;
+  padding:0;
+}
+
+
+.contain-cbox{
+  input{
+    float:left;
+    height: 30px;
+    margin-right:8px;
+    margin-left:0;
+  }
+}
+//Placeholder styling
+.green {
+  button{
+    .transition(all .2s ease-in-out);
+    &:hover{
+      .transform(translateY(2px));
+      cursor: pointer;
+    }
+  }
+
+  input:focus,select:focus,textarea:focus,option:focus{
+    color: #fff;
+    border: 3px solid #fff;
+    outline: none;
+  }
+  input, textarea, select {
+    background: #ededed;
+    border: 3px solid darken(@basicGreen, 2%);
+    background: darken(@basicGreen, 6%);
+    color: #fff;
+    &::placeholder {
+      color: #45bb45;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@-webkit-keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
